@@ -40,7 +40,7 @@ if(isset($_POST['submitBTN'])) {
   
       if($statement->rowCount() == 1){
         $result = "<p style='padding: 20px; color: green;'> Registration Successful</p>";
-        header("location: login.php");
+        header("location: signin.php");
       }
   
     }

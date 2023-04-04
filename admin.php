@@ -91,6 +91,6 @@ $total_stories = $stmt->fetchColumn();
             <script src="assets/adminscript.js"></script>
     </body>
     <?php
-  readfile('footer.php');
+  //readfile('footer.php');
 ?>
 </html>

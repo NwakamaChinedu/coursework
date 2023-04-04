@@ -35,7 +35,7 @@ if(isset($_POST['submitBTN'])) {
     $is_Admin = 1;
   
     try{
-      $sql = "INSERT INTO storyteller_tb (email, username, password, is_Admin) VALUES (:email, :username, :password, :is_Admin) ";
+      $sql = "INSERT INTO users (email, username, password, is_Admin) VALUES (:email, :username, :password, :is_Admin) ";
   
       $statement = $conn->prepare($sql);
       //$statement = $conn->exec($sql)
@@ -43,7 +43,7 @@ if(isset($_POST['submitBTN'])) {
   
       if($statement->rowCount() == 1){
         $result = "<p style='padding: 20px; color: green;'> Registration Successful</p>";
-        header("location: login.php");
+        header("location: signin.php");
       }
   
     }
