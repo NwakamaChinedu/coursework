@@ -3,10 +3,18 @@ readfile('headerLogout.php');
 include_once 'assets/sql/connect.php';
 include_once 'assets/sessions.php';
 
+
+
 if(isset($_POST['readBTN'])){
     header("location: admin.php");
 }
 
+// Selecting all users
+
+$query = "SELECT * FROM users";
+$userstatement = $conn->prepare($query);
+$userstatement->execute();
+$userresult = $userstatement->fetchAll();
 
 
 $query = "SELECT * FROM allstories";
@@ -25,6 +33,13 @@ $stmt = $conn->prepare('SELECT COUNT(*) FROM allstories');
 $stmt->execute();
 // Fetch the result
 $total_stories = $stmt->fetchColumn();
+
+// ccounting users
+$countuserstmt = $conn->prepare('SELECT COUNT(*) FROM users');
+// Execute the query
+$countuserstmt->execute();
+// Fetch the result
+$total_users = $countuserstmt->fetchColumn();
 
 
 ?>
@@ -85,6 +100,57 @@ $total_stories = $stmt->fetchColumn();
                     <h2>Total number of stories: <?php echo $total_stories; ?></h2>
                     </div>
                 </div>
+                <br>
+                <br>
+        <!-- Beginning of user delete -->
+        <h2 class="text-center text-uppercase"> A Spool of all Users</h2>
+        <div class="table-responsive">
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Email</th> 
+                        <!-- <th>Location</th>-->
+                        <th>Action</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        
+                        if($result){
+
+                            foreach($userresult as $userrow){
+                                ?>
+                                    <tr>
+                                        <td><?= $userrow['username']; ?></td>
+                                        <td><?= $userrow['email']; ?></td>
+                                        <td>
+                                            <!-- <a href="readstory.php?sid=<?php echo $row['sid']; ?>" class="btn btn-success"  role="button" name="readBTN">Read</a>
+                                            <a href="storyedit.php?sid=<?php echo $row['sid']; ?>" class="btn btn-warning"  role="button" name="updateeBTN">Update</a> -->
+                                            <a href="deleteuser.php?id=<?php echo $userrow['id']; ?>" class="btn btn-danger"  role="button" name="deleteBTN">Delete</a>
+                                        </td>
+                                    </tr>
+                                <?php
+                            }
+
+                        }
+                        else{
+                            ?>
+                                <tr>
+                                    <td colspan="3">No Record Found</td>
+                                </tr>
+                            <?php
+                        }
+                    ?>
+                </tbody>
+            </table>
+            <div>
+                    <h2>Total number of users: <?php echo $total_users; ?></h2>
+                    </div>
+        </div>
+    </div>
+        <!-- end of user delete -->
             </div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
