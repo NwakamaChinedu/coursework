@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 04, 2023 at 11:27 PM
+-- Generation Time: Apr 05, 2023 at 04:54 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -41,14 +41,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `is_Admin`, `image`) VALUES
-(1, 'ihuoma', 'ihuoma@example.com', '$2y$10$dlYU4kIp1YXm8nmy0S6WSentAPqGHxc/dLhUkk.zu4PbOhb/Kl28W', 0, NULL),
-(2, 'Ephraim', 'ephraim@example.com', '$2y$10$eUjWubxljZweghQB6KSaQ.0s6GL07QR05MLx1.f9.0GOIgNZz0XMW', 1, NULL),
-(3, 'Emeka', 'emeka@gmail.com', '$2y$10$Zk8.kfU7QodJYD7Lz.dLGusI/Y32A45PPcWsog6uid9W0WAUh60NC', 0, NULL),
-(4, 'tester', 'tester@example.com', '$2y$10$abNjUHuBadXF6kJ/jnlxLOJuLErRoX4yS7s1bN9lGEEaoJ/S3o2e6', 0, NULL),
+(2, 'Ephraim', 'ephraim@example.com', '$2y$10$eUjWubxljZweghQB6KSaQ.0s6GL07QR05MLx1.f9.0GOIgNZz0XMW', 0, NULL),
 (5, 'Anthony', 'anthony@example.com', '$2y$10$ZDjCaCSJhqo5Hw.c/sHuCORNSfmZ2XTAoR/NflY0Qb1FhdLnvbHKu', 0, NULL),
-(6, 'testing', 'test@example.com', '$2y$10$CXyrilCiOljsghA6yOmyJ.mP3w3iEah.Bxc31fjOkDb1iN1mQJLfO', 0, NULL),
 (8, 'Storyteller', 'storyteller@example.com', '$2y$10$L4WuwKQz4GrzS7haw3QsYe2kg90Gx/PYGBGhZYmiFMQJcSU2BKHAO', 0, NULL),
-(11, 'Adminuser', 'Adminuser@example.com', '$2y$10$In7J4QTi3NSSi9D42KxE.e3Cj86Ee7FWV/9map38vp86F.33CVGFe', 0, NULL);
+(11, 'Adminuser', 'Adminuser@example.com', '$2y$10$In7J4QTi3NSSi9D42KxE.e3Cj86Ee7FWV/9map38vp86F.33CVGFe', 1, NULL),
+(12, 'newadmin', 'new@admin.com', '$2y$10$htU92oENxzBxPGAcM4qrC.56cuubqk1gIC/HNC3gXSYpPWYA4UA6q', 1, NULL);
 
 --
 -- Indexes for dumped tables
@@ -68,7 +65,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

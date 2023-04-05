@@ -24,31 +24,11 @@ else{
     <!-- Main Content -->
     <div class="container my-4">
         <h1>About Us</h1>
-        <p>As people travel round the world, one of the stories they tell is that of the beautiful restaurants they visit.
-My application (called “Restorant”, i.e. rest-to-rant) enables tourist to share their stories of restaurant adventures in new places they visit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+            culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-            <!-- First Card -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Our History</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi bibendum eget enim ut consequat. Etiam quis lectus vitae felis porttitor pretium. Quisque molestie ex id magna tincidunt, in pulvinar leo eleifend. Nam molestie luctus ex.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Second Card -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Our Mission</h5>
-                        <p class="card-text">Nullam vulputate augue a libero hendrerit, vel interdum nulla suscipit. Duis ultrices justo nec sem suscipit, nec tristique elit tempor. Aenean sem ex, tincidunt eget gravida vel, euismod sit amet ex. Nam maximus, magna sed facilisis rhoncus, est felis maximus nisl, a pellentesque sapien tortor vitae quam.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
         
     <!-- Bootstrap JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.min.js"></script>
