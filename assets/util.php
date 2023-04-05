@@ -1,5 +1,10 @@
 <?php
 
+/* Reference
+
+Terry, M. (2016). Signing In. [online] www.youtube.com. Available at:
+ https://www.youtube.com/watch?v=PKXkcu8Z5eI&list=PL9mwDhhLGZilsMTm1POos9aXjvorie3Me&index=8 [Accessed 13 Mar. 2023]. */
+
 
 function empty_field_val($requiredFields_array) {
 

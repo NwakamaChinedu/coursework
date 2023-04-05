@@ -1,4 +1,7 @@
 <?php
+/* Reference:
+Code reuse from general coursework cmm004, Group G. */
+
 // initialize a session or read a session
 include_once 'assets/util.php';
 include_once 'assets/sql/connect.php';
@@ -15,10 +18,6 @@ if(isset($_POST['homeBtn'])){
   header("location: index.php");
 }
 
-
-
-//load the database connection string
-//require_once "db-conn2.php";
 
 //set the variables as empty initially.
 $username = $password = $is_Admin =  "";

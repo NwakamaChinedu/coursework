@@ -1,16 +1,13 @@
 <?php
+
+/* Reference
+
+Hill, J. (2020). window.location.href and window.open () methods in JavaScript. [online] Stack Overflow. Available at: 
+https://stackoverflow.com/questions/7077770/window-location-href-and-window-open-methods-in-javascript [Accessed 25 Mar. 2023]. */
+
 include_once 'assets/sql/connect.php';
 
 $id = $_GET['id'];
-/* $id = $_GET['sid']; 
-$id = urldecode($sid); 
-$id = str_replace("<", "", $sid); */
-
-
-/* $delquery = "DELETE FROM users where id = $id";
-    $delstatement = $conn->prepare($delquery);
-    $delstatement->execute();
-    header("location: admin.php"); */
 
 $delsql = "SELECT COUNT(*) AS count FROM allstories WHERE id = $id";
 $stmt = $conn->prepare($delsql);

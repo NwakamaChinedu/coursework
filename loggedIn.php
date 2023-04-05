@@ -20,14 +20,6 @@ $statement->execute();
 
 $result = $statement->fetchAll();
 
-/* $delid = $row['sid'];
-if(isset($_POST['deleteBTN'])){
-    $delquery = "DELETE FROM stories_tb where sid = $delid";
-    echo $delid;
-    //$delstatement = $conn->prepare($delquery);
-    $conn->execute($delquery);
-    header("location: loggedIn.php");
-} */
 
 ?>
 
